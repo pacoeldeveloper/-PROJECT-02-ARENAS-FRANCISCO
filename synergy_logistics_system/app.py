@@ -8,7 +8,7 @@ consult the README.md file in my github account: @farenasencis
 '''
 
 from synergy_logistics_system.views.screen_printing import *
-#from synergy_logistics_system.data. import 
+from synergy_logistics_system.data.analysis_processes import * 
 
 def main_screen() -> None:
     print_main_menu()
@@ -18,15 +18,21 @@ def main_screen() -> None:
         
         if selected_option == 1:
             # Solution
-            selected_option = int(input(""))
+            print_routes_analysis()
+            routes_analysis()
+            selected_option = int(input("\nAnswer [0, 1, 2, 3]: "))
             
         elif selected_option == 2:
             # Solution 
-            selected_option = int(input(""))
+            print_transport_analysis()
+            transport_analysis()
+            selected_option = int(input("\nAnswer [0, 1, 2, 3]: "))
 
         elif selected_option == 3:
             # Solution
-            selected_option = int(input(""))
+            print_income_analysis()
+            income_analysis()
+            selected_option = int(input("\nAnswer [0, 1, 2, 3]: "))
         
         else: 
             print("You typed an invalid option!")
